@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #DC2626;
+  --color-secondary: #FB7185;
+  --color-accent: #6366F1;
+  --color-warning: #F59E0B;
+  --color-brand-bg: #F5F5F4;
+  --color-brand-bg-alt: #ECECEC;
+  --color-brand-dark: #111827;
+
+  --font-sans: 'Satoshi', 'Inter', sans-serif;
+  --font-heading: 'Clash Display', 'Neue Montreal', sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-dark);
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/20 backdrop-blur-sm border border-white/10 shadow-sm;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-sm border border-white/5 shadow-sm;
+  }
+
+  .btn-premium {
+    @apply relative overflow-hidden px-8 py-4 rounded-full font-medium transition-all duration-500 hover:scale-105 active:scale-95 border border-transparent;
+  }
+
+  .sticky-card {
+    @apply sticky top-32 transition-transform duration-500;
+  }
+}
+
+/* Grain Effect */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(220, 38, 38, 0.2);
+  border-radius: 999px;
+}
+
+/* Background Gradients */
+.bg-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.4;
+  animation: blob-float 20s infinite alternate;
+}
+
+@keyframes blob-float {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(100px, 50px) scale(1.1); }
+  100% { transform: translate(-50px, 100px) scale(0.9); }
+}
