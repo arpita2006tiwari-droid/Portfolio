@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'py-4' : 'py-8'}`}>
       <div className="container mx-auto px-6">
-        <div className={`glass px-8 py-4 rounded-full flex items-center justify-between transition-all duration-500 ${isScrolled ? 'shadow-2xl border-white/20' : 'bg-transparent border-transparent shadow-none'}`}>
+        <div className={`px-8 py-4 rounded-full flex items-center justify-between transition-all duration-500 ${isScrolled ? 'glass shadow-2xl border-white/20' : 'bg-transparent border-transparent shadow-none'}`}>
           
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 bg-brand-dark text-white rounded-full flex items-center justify-center font-black text-xl tracking-tighter group-hover:bg-primary transition-colors">

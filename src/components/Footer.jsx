@@ -10,7 +10,7 @@ const Footer = () => {
               AT
             </div>
             <div className="text-sm font-bold uppercase tracking-widest text-brand-dark/40">
-              © 2025 Arpita Tiwari
+              © 2026 Arpita Tiwari
             </div>
           </div>
           

@@ -27,6 +27,11 @@
     color: var(--color-brand-dark);
     overflow-x: hidden;
     font-family: var(--font-sans);
+    cursor: none;
+  }
+
+  a, button, [role="button"] {
+    cursor: none !important;
   }
 
   h1, h2, h3, h4, h5, h6 {

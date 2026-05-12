@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 const projects = [
   {
     title: "Sportify",
-    year: "2025",
+    year: "2026",
     role: "Lead Full-Stack Developer",
     services: ["Venue Management", "Coach Tracking", "Analytics Dashboard"],
     description: "The definitive platform for sports in Mumbai, delivering a premium, high-performance ecosystem for basketball venue management and elite coach tracking across the city's premier facilities.",
@@ -15,9 +15,10 @@ const projects = [
       value: "45%"
     },
     tags: ["React", "Firebase", "Framer Motion"],
-    link: "#",
+    link: "https://arpita2006tiwari-droid.github.io/Sportify_main/#features",
     github: "#",
     image: "/sportify.png",
+    logo: "/sportifylogo.png",
     color: "bg-[#FFF8F4] border-orange-200/50"
   },
   {
@@ -33,7 +34,8 @@ const projects = [
     tags: ["Next.js", "GSAP", "Three.js"],
     link: "https://businessmantra.co/",
     github: "#",
-    image: null,
+    image: "/bs.png",
+    logo: "/bslogo.png",
     color: "bg-[#F4F9FF] border-blue-200/50"
   },
   {
@@ -89,7 +91,8 @@ const ProjectCard = ({ project, index }) => {
                 <span className="w-1 h-1 rounded-full bg-primary" />
                 <span>{project.role}</span>
               </div>
-              <h3 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight group-hover:text-primary transition-colors duration-500">
+              <h3 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight group-hover:text-primary transition-colors duration-500 flex items-center gap-4">
+                {project.logo && <img src={project.logo} alt="" className="h-12 md:h-16 w-auto object-contain" />}
                 {project.title}
               </h3>
             </div>
@@ -116,7 +119,7 @@ const ProjectCard = ({ project, index }) => {
             <div className="flex items-center gap-6 pt-4">
               <div className="flex gap-4">
                 <a href={project.github} className="w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center hover:bg-brand-dark hover:text-white transition-all"><FaGithub size={20} /></a>
-                <a href={project.link} className="w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><ExternalLink size={20} /></a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><ExternalLink size={20} /></a>
               </div>
             </div>
           </div>
@@ -128,7 +131,9 @@ const ProjectCard = ({ project, index }) => {
                   src={project.image} 
                   alt={project.title}
                   className={`w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 ${
-                    project.title === "Sportify" ? "-translate-y-[12%] scale-[1.2] origin-top" : "object-top"
+                    project.title === "Sportify" ? "-translate-y-[12%] scale-[1.2] origin-top" : 
+                    project.title === "Business Mantra" ? "object-top scale-[1.05]" : 
+                    project.title === "Brand Identity Design" ? "object-contain p-12 bg-white" : "object-top"
                   }`}
                 />
               </div>
