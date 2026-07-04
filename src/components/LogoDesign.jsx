@@ -1,22 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import sportifyLogoImg from '/sportifylogo.png';
+import bsLogoImg from '/bslogo.png';
+import serviceIconsImg from '/service-icons.png';
 
 const logos = [
   {
     name: "Sportify",
-    image: "/sportifylogo.png",
+    image: sportifyLogoImg,
     description: "Dynamic identity for a premium sports venue management platform.",
     color: "bg-orange-50"
   },
   {
     name: "Business Mantra",
-    image: "/bslogo.png",
+    image: bsLogoImg,
     description: "Modern, professional branding for a creative agency ecosystem.",
     color: "bg-blue-50"
   },
   {
     name: "Service Ecosystem",
-    image: "/service-icons.png",
+    image: serviceIconsImg,
     description: "Comprehensive iconography and visual language for digital services.",
     color: "bg-gray-50"
   }

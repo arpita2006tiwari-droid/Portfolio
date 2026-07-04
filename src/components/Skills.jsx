@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaPython, FaChartBar, FaFigma, FaPalette, FaMobileAlt } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaPython, FaChartBar, FaFigma, FaPalette, FaMobileAlt, FaSearch } from 'react-icons/fa';
 import { SiTailwindcss, SiPostgresql, SiMongodb, SiPandas, SiStreamlit, SiNextdotjs, SiFramer, SiFlutter } from 'react-icons/si';
 
 const stacks = [
@@ -16,7 +16,8 @@ const stacks = [
   { name: "Figma", icon: FaFigma, category: "Design" },
   { name: "Power BI", icon: FaChartBar, category: "Analytics" },
   { name: "Pandas", icon: SiPandas, category: "Data" },
-  { name: "UI/UX", icon: FaPalette, category: "Design" }
+  { name: "UI/UX", icon: FaPalette, category: "Design" },
+  { name: "SEO", icon: FaSearch, category: "Marketing" }
 ];
 
 const Skills = () => {

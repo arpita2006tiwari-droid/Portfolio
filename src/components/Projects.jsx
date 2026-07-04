@@ -3,6 +3,13 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
+import sportifyImg from '/sportify.png';
+import sportifyLogoImg from '/sportifylogo.png';
+import bsImg from '/bs.png';
+import bsLogoImg from '/bslogo.png';
+import ngoImg from '/ngo.png';
+import attendanceImg from '/attendance.png';
+
 const projects = [
   {
     title: "Sportify",
@@ -17,8 +24,8 @@ const projects = [
     tags: ["React", "Firebase", "Framer Motion"],
     link: "https://arpita2006tiwari-droid.github.io/Sportify_main/#features",
     github: "#",
-    image: "/sportify.png",
-    logo: "/sportifylogo.png",
+    image: sportifyImg,
+    logo: sportifyLogoImg,
     color: "bg-[#FFF8F4] border-orange-200/50"
   },
   {
@@ -34,8 +41,8 @@ const projects = [
     tags: ["Next.js", "GSAP", "Three.js"],
     link: "https://businessmantra.co/",
     github: "#",
-    image: "/bs.png",
-    logo: "/bslogo.png",
+    image: bsImg,
+    logo: bsLogoImg,
     color: "bg-[#F4F9FF] border-blue-200/50"
   },
   {
@@ -51,7 +58,7 @@ const projects = [
     tags: ["React", "PostgreSQL", "Node.js"],
     link: "#",
     github: "#",
-    image: "/ngo.png",
+    image: ngoImg,
     color: "bg-[#F4FFF8] border-green-200/50"
   },
   {
@@ -67,7 +74,7 @@ const projects = [
     tags: ["React Native", "Expo", "Redux"],
     link: "#",
     github: "#",
-    image: "/attendance.png",
+    image: attendanceImg,
     color: "bg-[#F9F4FF] border-purple-200/50"
   }
 ];

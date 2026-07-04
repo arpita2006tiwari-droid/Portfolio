@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Download, Mail, ExternalLink } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import meImg from '/me.jpg';
 
 const roles = [
   "Full-Stack Developer",
@@ -38,14 +39,14 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
         
         {/* Main Composition */}
-        <div className="relative w-full max-w-2xl aspect-[4/5] md:aspect-[1/1] flex items-center justify-center">
+        <div className="relative w-full max-w-2xl h-[400px] md:h-auto md:aspect-[1/1] flex items-center justify-center">
           
           {/* Top Typography */}
           <motion.h1 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-0 md:-top-10 left-0 right-0 text-center text-[12vw] md:text-[10vw] font-bold tracking-tighter leading-none z-0 pointer-events-none text-brand-dark/20 uppercase"
+            className="absolute -top-16 md:-top-10 left-0 right-0 text-center text-[22vw] md:text-[10vw] font-bold tracking-tighter leading-none z-0 pointer-events-none text-brand-dark/20 uppercase"
             style={{ fontFamily: 'Clash Display' }}
           >
             ARPITA
@@ -57,11 +58,11 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             style={{ y: y1 }}
-            className="relative w-[280px] h-[350px] md:w-[450px] md:h-[550px] rounded-[40px] md:rounded-[80px] overflow-hidden shadow-2xl z-10 group bg-white p-2 border border-white/50"
+            className="relative w-[280px] h-[350px] md:w-[450px] md:h-[550px] rounded-[40px] md:rounded-[80px] overflow-hidden shadow-2xl z-10 group bg-white p-2 border border-white/50 my-10 md:my-0"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700" />
             <img 
-              src="/me.jpg" 
+              src={meImg} 
               alt="Arpita Tiwari" 
               className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 rounded-[32px] md:rounded-[72px]"
             />
@@ -74,7 +75,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute bottom-0 md:-bottom-10 left-0 right-0 text-center text-[12vw] md:text-[10vw] font-bold tracking-tighter leading-none z-20 pointer-events-none text-brand-dark/20 uppercase"
+            className="absolute -bottom-16 md:-bottom-10 left-0 right-0 text-center text-[22vw] md:text-[10vw] font-bold tracking-tighter leading-none z-20 pointer-events-none text-brand-dark/20 uppercase"
             style={{ fontFamily: 'Clash Display' }}
           >
             TIWARI
